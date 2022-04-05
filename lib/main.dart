@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'home.dart';
+import 'keluhan.dart';
 
 //package letak folder Anda
 void main() {
@@ -7,6 +8,7 @@ void main() {
     initialRoute: '/',
     routes: {
       '/': (context) => Home(),
+      '/keluhan': (context) => Keluhan(),
     },
   ));
 }

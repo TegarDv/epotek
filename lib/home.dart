@@ -22,7 +22,7 @@ class Home extends StatelessWidget {
             ),
             ElevatedButton.icon(
               onPressed: () {
-                Navigator.pushNamed(context, '/');
+                Navigator.pushNamed(context, '/keluhan');
               },
               icon: const Icon(Icons.add, size: 18),
               label: const Text(
