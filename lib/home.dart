@@ -5,17 +5,40 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text('E-POTEK'),
+          title: const Text('E-POTEK HOMEPAGE'),
         ),
         body: Center(
-            child: Container(
-                width: 150,
-                height: 50,
-                child: ElevatedButton(
-                  onPressed: () {
-                    Navigator.pushNamed(context, '/');
-                  },
-                  child: Text('Menu Keluhan'),
-                ))));
+            child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            const Text(
+              'E-POTEK',
+              textAlign: TextAlign.start,
+              style: TextStyle(
+                fontStyle: FontStyle.normal,
+                fontWeight: FontWeight.bold,
+                fontSize: 25.0,
+              ),
+            ),
+            ElevatedButton.icon(
+              onPressed: () {
+                Navigator.pushNamed(context, '/');
+              },
+              icon: const Icon(Icons.add, size: 18),
+              label: const Text(
+                'Menu Keluhan',
+              ),
+            ),
+            ElevatedButton.icon(
+              onPressed: () {
+                Navigator.pushNamed(context, '/');
+              },
+              icon: const Icon(Icons.medication_outlined),
+              label: const Text(
+                ' Daftar Obat  ',
+              ),
+            )
+          ],
+        )));
   }
 }
